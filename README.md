@@ -29,6 +29,6 @@ Here are some of my recent or favorite projects:
 ## 📫 Connect with Me
 - **LinkedIn:** [Saiswaroop Ghadai](https://linkedin.com/in/kounsaiswaroop)
 - **Twitter:** [@kounsaiswaroop](https://twitter.com/kounsaiswaroop)
-- **Email:** [saiswaroopghadai@gmail.com](mailto: saiswaroopghadai@gmail.com)
+- **Email:** [saiswaroopghadai@gmail.com](mailto:saiswaroopghadai@gmail.com)
 
 ---
