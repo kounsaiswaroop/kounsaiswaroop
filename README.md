@@ -21,8 +21,6 @@ Welcome to my GitHub profile! I’m a tech enthusiast, developer, and lifelong l
 Here are some of my recent or favorite projects:
 - **AncientCracker** - AncientCracker is a startup focused on providing modern digital solutions, WebApp Building and many more tech supports. It blends traditional values with innovative technology to help businesses and individuals meet their digital needs effectively. The goal is to empower clients with tailored solutions that address current challenges in the tech landscape.
 
-- **UrbaniteTreasures** - UrbaniteTreasures is your go-to destination for stylish and customized clothing that reflects your unique personality. We specialize in providing high-quality apparel for both men and women, designed to fit your preferences perfectly. With a commitment to quick delivery, we ensure that your personalized orders are completed within just 10 days. Whether you’re looking for something trendy or classic, UrbaniteTreasures brings you top-notch fashion tailored just for you. Discover the joy of expressing yourself through our exclusive designs!
-
 ## 📈 GitHub Stats
 ![Saiswaroop's GitHub stats](https://github-readme-stats.vercel.app/api?kounsaiswaroop=saiswaroopghadai&show_icons=true&theme=radical)
 
