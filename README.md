@@ -19,7 +19,7 @@ Welcome to my GitHub profile! I’m a tech enthusiast, developer, and lifelong l
 
 ## 👨‍💻 Startups
 Here are some of my recent or favorite projects:
-- **AncientCracker** - AncientCracker is a startup focused on providing modern digital solutions, WebApp Building and many more tech supports. It blends traditional values with innovative technology to help businesses and individuals meet their digital needs effectively. The goal is to empower clients with tailored solutions that address current challenges in the tech landscape.
+- **AncientCracker** [CLOSED] - AncientCracker is a startup focused on providing modern digital solutions, WebApp Building and many more tech supports. It blends traditional values with innovative technology to help businesses and individuals meet their digital needs effectively. The goal is to empower clients with tailored solutions that address current challenges in the tech landscape.
 
 ## 📈 GitHub Stats
 ![Saiswaroop's GitHub stats](https://github-readme-stats.vercel.app/api?kounsaiswaroop=saiswaroopghadai&show_icons=true&theme=radical)
