@@ -22,7 +22,7 @@ Here are some of my recent or favorite projects:
 - **AncientCracker** [CLOSED] - AncientCracker is a startup focused on providing modern digital solutions, WebApp Building and many more tech supports. It blends traditional values with innovative technology to help businesses and individuals meet their digital needs effectively. The goal is to empower clients with tailored solutions that address current challenges in the tech landscape.
 
 ## 📈 GitHub Stats
-![Saiswaroop's GitHub stats](https://github-readme-stats.vercel.app/api?kounsaiswaroop=saiswaroopghadai&show_icons=true&theme=radical)
+<img src="https://github-readme-stats.vercel.app/api?username=kounsaiswaroop&theme=tokyonight&show_icons=true&hide_border=true&count_private=true" alt="kounsaiswaroop's GitHub Stats" />
 
 ## 📫 Connect with Me
 - **LinkedIn:** [Saiswaroop Ghadai](https://linkedin.com/in/kounsaiswaroop)
