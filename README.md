@@ -17,10 +17,6 @@ Welcome to my GitHub profile! I’m a tech enthusiast, developer, and lifelong l
 - Expanding knowledge in **Python** and **Backend Web Devlopment**
 - Working on enhancing skills in **Frontend Web Development** and **My Startups**
 
-## 👨‍💻 Startups
-Here are some of my recent or favorite projects:
-- **AncientCracker** [CLOSED] - AncientCracker is a startup focused on providing modern digital solutions, WebApp Building and many more tech supports. It blends traditional values with innovative technology to help businesses and individuals meet their digital needs effectively. The goal is to empower clients with tailored solutions that address current challenges in the tech landscape.
-
 ## 📈 GitHub Stats
 <img src="https://github-readme-stats.vercel.app/api?username=kounsaiswaroop&theme=tokyonight&show_icons=true&hide_border=true&count_private=true" alt="kounsaiswaroop's GitHub Stats" />
 <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=kounsaiswaroop&theme=tokyonight&show_icons=true&hide_border=true&layout=compact" alt="kounsaiswaroop's GitHub Stats" />
