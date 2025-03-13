@@ -1,4 +1,4 @@
-<h2 align="left">Hi, This is Saiswaroop Ghadai, From Odisha, India. A passionate passionate having intrest in Full Stack Devlopment.</h2>
+<h2 align="left">Hi, This is Saiswaroop Ghadai, From Odisha, India. A passionate developer having intrest in Full Stack Devlopment.</h2>
 
 ###
 
