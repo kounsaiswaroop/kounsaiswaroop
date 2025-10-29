@@ -1,6 +1,6 @@
 # Hi 👋, I'm Saiswaroop Ghadai
 
-### A budding Css developer
+### A passionate web developer.
 
 - 🌱 I'm currently learning **Python, SQL.**
 
