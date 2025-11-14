@@ -1,4 +1,4 @@
-# Hi 👋, I'm Saiswaroop Ghadai
+# Hi 👋, I'm Sai Swaroop Ghadai
 
 ### A passionate web developer.
 
