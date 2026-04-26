@@ -4,190 +4,100 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sai Swaroop Ghadai || Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=Inter:wght@300;400&display=swap" rel="stylesheet">
     <style>
+        /* --- 1. GRUVBOX COLOR PALETTE --- */
         :root {
-            --bg: #050505;
-            --accent: #ffffff;
-            --secondary: #888888;
-            --card-bg: #111111;
+            --bg: #282828;
+            --fg: #ebdbb2;
+            --accent-red: #fb4934;
+            --accent-green: #b8bb26;
+            --accent-blue: #83a598;
+            --border: #504945;
         }
 
-        body {
-            background-color: var(--bg);
-            color: var(--accent);
-            font-family: 'Inter', -apple-system, sans-serif;
-            margin: 0;
+        /* --- 2. BASE STYLING --- */
+        body { 
+            font-family: 'Inter', sans-serif; 
+            background-color: var(--bg); 
+            color: var(--fg);
+            line-height: 1.6; 
+            margin: 0; 
+            padding: 80px 20px;
             display: flex;
-            flex-direction: column;
-            align-items: center;
             justify-content: center;
-            min-height: 100vh;
-            text-align: center;
-            padding: 20px;
         }
 
-        /* Typography */
-        h1 { font-size: 3rem; font-weight: 800; margin-bottom: 10px; letter-spacing: -2px; }
-        p { color: var(--secondary); font-size: 1.1rem; max-width: 500px; margin-bottom: 30px; }
+        .container { max-width: 600px; width: 100%; }
 
-        /* Social Bar - Floating Style */
-        .social-bar {
-            background: rgba(255, 255, 255, 0.05);
-            padding: 12px 24px;
-            border-radius: 50px;
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            display: flex;
-            gap: 20px;
-            backdrop-filter: blur(10px);
-        }
+        /* --- 3. TYPOGRAPHY --- */
+        h1 { font-family: 'JetBrains Mono', monospace; font-size: 2.2rem; margin-bottom: 0.5rem; color: var(--accent-green); }
+        .subtitle { font-size: 1rem; opacity: 0.8; margin-bottom: 2rem; }
 
-        .social-icon {
-            fill: var(--secondary);
-            width: 22px;
-            height: 22px;
-            transition: 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-        }
-
-        .social-icon:hover {
-            fill: var(--accent);
-            transform: scale(1.2);
-        }
-
-        /* The Inquiry Button */
-        .mail-link {
-            margin-top: 40px;
-            color: var(--accent);
-            text-decoration: none;
-            font-weight: 500;
-            border-bottom: 1px solid var(--accent);
-            padding-bottom: 5px;
+        /* --- 4. NAVIGATION / SOCIALS --- */
+        .social-links { display: flex; gap: 15px; margin-bottom: 3rem; }
+        .social-links a { 
+            text-decoration: none; 
+            color: var(--accent-blue); 
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.85rem;
             transition: 0.3s;
         }
+        .social-links a:hover { color: var(--fg); }
 
-        .mail-link:hover {
-            color: var(--secondary);
-            border-color: var(--secondary);
+        /* --- 5. PROJECT SECTION --- */
+        .project-section { border-top: 1px solid var(--border); padding-top: 2rem; }
+        .project-title { font-family: 'JetBrains Mono', monospace; color: var(--accent-red); margin-bottom: 0.5rem; }
+        .project-desc { margin-bottom: 1rem; font-size: 0.95rem; }
+        
+        /* --- 6. BUTTON STYLING --- */
+        .btn { 
+            display: inline-block; 
+            margin-top: 2rem;
+            padding: 10px 20px; 
+            border: 1px solid var(--accent-blue);
+            color: var(--accent-blue); 
+            text-decoration: none; 
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.8rem;
+            transition: 0.3s;
         }
-
-        /* SVG Sizing */
-        svg { width: 100%; height: 100%; }
-
-        .content-section {
-    width: 100%;
-    max-width: 600px;
-    margin-top: 50px;
-    text-align: left; /* Aligning projects to the left looks more "pro" */
-}
-
-.section-label {
-    font-size: 0.7rem;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    color: var(--secondary);
-    margin-bottom: 20px;
-    display: block;
-    border-bottom: 1px solid rgba(255,255,255,0.1);
-    padding-bottom: 10px;
-}
-
-.project-item {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 15px 0;
-    text-decoration: none;
-    color: var(--accent);
-    border-bottom: 1px solid rgba(255,255,255,0.05);
-    transition: 0.2s;
-}
-
-.project-item:hover {
-    padding-left: 10px;
-    color: var(--secondary);
-}
-
-.project-name { font-weight: 600; font-size: 1.1rem; }
-.project-type { font-size: 0.8rem; color: var(--secondary); opacity: 0.7; }
-
-footer {
-    margin-top: 80px; /* Gives the page room to breathe */
-    padding-bottom: 40px;
-    width: 100%;
-    max-width: 600px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    border-top: 1px solid rgba(255, 255, 255, 0.05);
-    padding-top: 20px;
-    color: #444; /* Very dark grey so it fades into the background */
-    font-size: 0.75rem;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-}
-
-.timestamp {
-    font-family: monospace;
-}
+        .btn:hover { background: var(--accent-blue); color: var(--bg); }
     </style>
 </head>
 <body>
 
-    <h1>Sai Swaroop Ghadai</h1>
-    <p>I don't believe in waiting for a graduation cap to start building.</p>
+    <div class="container">
+        <h1>Sai Swaroop Ghadai</h1>
+        <p class="subtitle">Student ||
+        Founder @ezpustak</p>
+        
+        <div class="social-links">
+            <a href="https://instagram.com/kounsaiswaroop" target="_blank">Instagram</a>
+            <a href="https://x.com/kounsaiswaroop" target="_blank">X(Twitter)</a>
+            <a href="https://linkedin.com/in/kounsaiswaroop" target="_blank">LinkedIn</a>
+            <a href="https://github.com/kounsaiswaroop" target="_blank">GitHub</a>
+        </div>
+        
+        
+<section class="mentality">
+    <h2 style="font-family: 'JetBrains Mono'; color: var(--accent-red);">// philosophy.md</h2>
+    <div style="padding: 20px; border-left: 2px solid var(--accent-red); background: rgba(251, 73, 52, 0.05);">
+        <p style="font-family: 'JetBrains Mono'; font-size: 0.9rem; color: var(--fg); margin: 0; line-height: 1.8;">
+            // I don't believe in a graduation cap to start building. <br>
+            // My identity is not inherited—it is forged by what I create.
+        </p>
+    </div>
+</section>
 
-    <div class="social-bar">
-        <a href="https://github.com/kounsaiswaroop" class="social-icon" title="GitHub">
-            <svg viewBox="0 0 24 24"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.43.372.823 1.102.823 2.222 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
-        </a>
-        <a href="https://x.com/kounsaiswaroop" class="social-icon" title="X">
-            <svg viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
-        </a>
-        <a href="https://instagram.com/kounsaiswaroop" class="social-icon" title="Instagram">
-            <svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849s-.011 3.584-.069 4.849c-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07s-3.584-.011-4.849-.07c-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849s.012-3.584.07-4.849c.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948s.014 3.667.072 4.947c.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072s3.667-.014 4.947-.072c4.358-.2 6.78-2.618 6.98-6.98.058-1.28.072-1.689.072-4.948s-.014-3.667-.072-4.947c-.2-4.358-2.618-6.78-6.98-6.98-1.28-.058-1.689-.072-4.948-.072zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
-        </a>
-        <a href="https://youtube.com/@kounsaiswaroop" class="social-icon" title="YouTube">
-            <svg viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
-        </a>
-        <a href="https://linkedin.com/in/kounsaiswaroop" class="social-icon" title="LinkedIn">
-            <svg viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
-        </a>
+        <section class="project-section">
+            <h2 class="project-title">// EzPustak</h2>
+            <p class="project-desc">A centralized hub for academic resources. Built with modern web standards to ensure speed, accessibility, and clean design.</p>
+            <a href="https://ezpustak.vercel.app/" target="_blank" style="color: var(--accent-green); text-decoration: none; font-family: 'JetBrains Mono'; font-size: 0.9rem;">View Project →</a>
+        </section>
+
+        <a href="mailto:ghadai.saiswaroop@proton.me" class="btn">SAY HELLO</a>
     </div>
 
-    <div class="content-section">
-    <span class="section-label">Selected Ventures</span>
-    
-    <a href="https://noirwick-studio.vercel.app" class="project-item" target="_blank">
-        <span class="project-name">NoirWick Studio</span>
-        <span class="project-type">Founder / CEO</span>
-    </a>
-
-    <a href="https://ezpustak.vercel.app" class="project-item" target="_blank">
-        <span class="project-name">ezpustak</span>
-        <span class="project-type">Founder / CEO</span>
-    </a>
-</div>
-
-<div class="content-section">
-    <span class="section-label">Programming Projects</span>
-    
-    <a href="https://github.com/ApexForge-Labs" class="project-item" target="_blank">
-        <span class="project-name">ApexForge Labs</span>
-        <span class="project-type">OpenSource Organization</span>
-    </a>
-
-    <!-- <a href="#" class="project-item">
-        <span class="project-name">SaaS Dashboard</span>
-        <span class="project-type">Next.js • TypeScript</span>
-    </a> -->
-</div>
-
-    <a href="mailto:ghadai.saiswaroop@proton.me?subject=Inquiry%20via%20Portfolio%20Website" class="mail-link">Say hello &rarr;</a>
-
-    
-    
-    <footer>
-    <div class="copyright">&copy; 2026 Sai Swaroop Ghadai</div>
-    <div class="timestamp">STABLE_BUILD_V1.0</div>
-</footer>
 </body>
 </html>
