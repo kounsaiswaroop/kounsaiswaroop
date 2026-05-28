@@ -1,103 +1,440 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sai Swaroop Ghadai || Portfolio</title>
-    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=Inter:wght@300;400&display=swap" rel="stylesheet">
-    <style>
-        /* --- 1. GRUVBOX COLOR PALETTE --- */
-        :root {
-            --bg: #282828;
-            --fg: #ebdbb2;
-            --accent-red: #fb4934;
-            --accent-green: #b8bb26;
-            --accent-blue: #83a598;
-            --border: #504945;
-        }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        /* --- 2. BASE STYLING --- */
-        body { 
-            font-family: 'Inter', sans-serif; 
-            background-color: var(--bg); 
-            color: var(--fg);
-            line-height: 1.6; 
-            margin: 0; 
-            padding: 80px 20px;
-            display: flex;
-            justify-content: center;
-        }
+  <title>Sai Swaroop Ghadai || Portfolio</title>
 
-        .container { max-width: 600px; width: 100%; }
+  <style>
 
-        /* --- 3. TYPOGRAPHY --- */
-        h1 { font-family: 'JetBrains Mono', monospace; font-size: 2.2rem; margin-bottom: 0.5rem; color: var(--accent-green); }
-        .subtitle { font-size: 1rem; opacity: 0.8; margin-bottom: 2rem; }
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+    }
 
-        /* --- 4. NAVIGATION / SOCIALS --- */
-        .social-links { display: flex; gap: 15px; margin-bottom: 3rem; }
-        .social-links a { 
-            text-decoration: none; 
-            color: var(--accent-blue); 
-            font-family: 'JetBrains Mono', monospace;
-            font-size: 0.85rem;
-            transition: 0.3s;
-        }
-        .social-links a:hover { color: var(--fg); }
+    body{
+      background:#0a0a0a;
+      color:#f5f5f5;
+      font-family:Inter, Arial, sans-serif;
+    }
 
-        /* --- 5. PROJECT SECTION --- */
-        .project-section { border-top: 1px solid var(--border); padding-top: 2rem; }
-        .project-title { font-family: 'JetBrains Mono', monospace; color: var(--accent-red); margin-bottom: 0.5rem; }
-        .project-desc { margin-bottom: 1rem; font-size: 0.95rem; }
-        
-        /* --- 6. BUTTON STYLING --- */
-        .btn { 
-            display: inline-block; 
-            margin-top: 2rem;
-            padding: 10px 20px; 
-            border: 1px solid var(--accent-blue);
-            color: var(--accent-blue); 
-            text-decoration: none; 
-            font-family: 'JetBrains Mono', monospace;
-            font-size: 0.8rem;
-            transition: 0.3s;
-        }
-        .btn:hover { background: var(--accent-blue); color: var(--bg); }
-    </style>
+    .container{
+      width:90%;
+      max-width:920px;
+      margin:auto;
+    }
+
+    /* top bar */
+
+    .notice{
+      position:sticky;
+      top:0;
+      z-index:100;
+      padding:14px 20px;
+      background:rgba(10,10,10,0.82);
+      border-bottom:1px solid #191919;
+      backdrop-filter:blur(14px);
+      color:#8e8e8e;
+      font-size:14px;
+      letter-spacing:0.3px;
+    }
+
+    /* hero */
+
+    .hero{
+      padding:110px 0 60px;
+    }
+
+    .hero h1{
+      font-size:76px;
+      letter-spacing:-4px;
+      margin-bottom:14px;
+      line-height:1;
+    }
+
+    .hero p{
+      max-width:680px;
+      color:#9d9d9d;
+      line-height:1.8;
+      font-size:18px;
+      margin-bottom:38px;
+    }
+
+    /* socials */
+
+    .socials{
+      display:flex;
+      flex-wrap:wrap;
+      gap:14px;
+      margin-bottom:35px;
+    }
+
+    .socials a{
+      text-decoration:none;
+      color:#d8d8d8;
+      background:#101010;
+      border:1px solid #1f1f1f;
+      padding:14px 18px;
+      border-radius:16px;
+      transition:0.25s;
+      display:flex;
+      align-items:center;
+      gap:10px;
+      min-width:140px;
+    }
+
+    .socials a:hover{
+      background:#161616;
+      border-color:#303030;
+      transform:translateY(-2px);
+    }
+
+    .socials span{
+      color:#6f6f6f;
+      font-size:13px;
+      display:block;
+    }
+
+    .socials strong{
+      font-size:15px;
+      font-weight:600;
+      color:#f5f5f5;
+    }
+
+    /* email button */
+
+    .email-btn{
+      display:inline-flex;
+      align-items:center;
+      gap:10px;
+      text-decoration:none;
+      background:#f5f5f5;
+      color:#111;
+      padding:15px 24px;
+      border-radius:16px;
+      font-weight:600;
+      transition:0.2s;
+    }
+
+    .email-btn:hover{
+      transform:translateY(-2px);
+    }
+
+    /* divider */
+
+    .divider{
+      margin:55px 0 28px;
+      width:100%;
+      height:1px;
+      background:#1c1c1c;
+    }
+
+    /* tabs */
+
+    .tabs{
+      display:flex;
+      gap:12px;
+      margin-bottom:10px;
+    }
+
+    .tab-btn{
+      border:none;
+      background:#111;
+      color:#9d9d9d;
+      padding:12px 20px;
+      border-radius:999px;
+      cursor:pointer;
+      transition:0.2s;
+      font-size:15px;
+      border:1px solid #1f1f1f;
+    }
+
+    .tab-btn:hover{
+      background:#181818;
+      color:#ffffff;
+    }
+
+    .tab-btn.active{
+      background:#f5f5f5;
+      color:#111;
+      border-color:#f5f5f5;
+    }
+
+    /* content */
+
+    .content{
+      padding:35px 0 70px;
+    }
+
+    .section{
+      display:none;
+    }
+
+    .section.active{
+      display:block;
+    }
+
+    /* cards */
+
+    .card{
+      background:#101010;
+      border:1px solid #1d1d1d;
+      border-radius:24px;
+      padding:30px;
+      margin-bottom:22px;
+      transition:0.25s;
+    }
+
+    .card:hover{
+      border-color:#323232;
+      transform:translateY(-3px);
+    }
+
+    .card small{
+      color:#6d6d6d;
+      font-size:13px;
+      letter-spacing:0.4px;
+    }
+
+    .card h2{
+      margin:12px 0 14px;
+      font-size:32px;
+      letter-spacing:-1.5px;
+      line-height:1.1;
+    }
+
+    .card p{
+      color:#a2a2a2;
+      line-height:1.8;
+      margin-bottom:22px;
+      font-size:15px;
+    }
+
+    .card a{
+      text-decoration:none;
+      color:#ffffff;
+      font-size:15px;
+    }
+
+    footer{
+      border-top:1px solid #171717;
+      padding:35px 0 50px;
+      color:#6d6d6d;
+      font-size:14px;
+    }
+
+    /* mobile */
+
+    @media(max-width:700px){
+
+      .hero h1{
+        font-size:52px;
+      }
+
+      .hero p{
+        font-size:16px;
+      }
+
+      .socials a{
+        width:100%;
+      }
+
+      .tabs{
+        width:100%;
+      }
+
+      .tab-btn{
+        flex:1;
+      }
+
+      .card{
+        padding:24px;
+      }
+
+      .card h2{
+        font-size:26px;
+      }
+
+    }
+a,
+button{
+  -webkit-tap-highlight-color: transparent;
+}
+
+a:focus,
+button:focus{
+  outline:none;
+}
+
+a,
+button{
+  user-select:none;
+}
+
+  </style>
 </head>
 <body>
 
-    <div class="container">
-        <h1>Sai Swaroop Ghadai</h1>
-        <p class="subtitle">Student ||
-        Founder @ezpustak</p>
+  <!-- top update -->
+
+  <div class="notice">
+    currently building projects, ideas and documenting the process online.
+  </div>
+
+  <div class="container">
+
+    <!-- hero -->
+
+    <section class="hero">
+
+      <h1>Sai Swaroop Ghadai</h1>
+
+      <p>
+        17M | Student | 🇮🇳
+      </p>
+
+      <!-- socials -->
+
+      <div class="socials">
+
         
-        <div class="social-links">
-            <a href="https://instagram.com/kounsaiswaroop" target="_blank">Instagram</a>
-            <a href="https://x.com/kounsaiswaroop" target="_blank">X(Twitter)</a>
-            <a href="https://linkedin.com/in/kounsaiswaroop" target="_blank">LinkedIn</a>
-            <a href="https://github.com/kounsaiswaroop" target="_blank">GitHub</a>
+
+        <a href="https://x.com/kounsaiswaroop" target="_blank">
+          <div>
+            <strong>X / Twitter</strong>
+            <span>@kounsaiswaroop</span>
+          </div>
+        </a>
+
+        <a href="https://github.com/kounsaiswaroop" target="_blank">
+          <div>
+            <strong>GitHub</strong>
+            <span>github.com/kounsaiswaroop</span>
+          </div>
+        </a>
+
+        <a href="https://substack.com/@kounsaiswaroop" target="_blank">
+          <div>
+            <strong>Substack</strong>
+            <span>Writing & updates</span>
+          </div>
+        </a>
+
+      </div>
+
+      <!-- email -->
+
+      <a class="email-btn"
+         href="mailto:ghadai.saiswaroop@proton.me">
+         Say Hello →
+      </a>
+
+      <!-- divider -->
+
+      <div class="divider"></div>
+
+      <!-- tabs -->
+
+      <div class="tabs">
+
+        <button class="tab-btn active"
+          onclick="showSection('projects', this)">
+          Projects
+        </button>
+
+        <button class="tab-btn"
+          onclick="showSection('posts', this)">
+          Posts
+        </button>
+
+      </div>
+
+    </section>
+
+    <!-- content -->
+
+    <section class="content">
+
+      <!-- projects -->
+
+      <div id="projects" class="section active">
+
+        <div class="card">
+
+          <small>APR 2026</small>
+
+          <h2>ezpustak</h2>
+
+          <p>
+            affordable pre-loved books with quality checked delivered right on your doorstep!
+          </p>
+
+          <a href="https://ezpustak.vercel.app/">
+            View Project →
+          </a>
+
         </div>
-        
-        
-<section class="mentality">
-    <h2 style="font-family: 'JetBrains Mono'; color: var(--accent-red);">// philosophy.md</h2>
-    <div style="padding: 20px; border-left: 2px solid var(--accent-red); background: rgba(251, 73, 52, 0.05);">
-        <p style="font-family: 'JetBrains Mono'; font-size: 0.9rem; color: var(--fg); margin: 0; line-height: 1.8;">
-            // I don't believe in a graduation cap to start building. <br>
-            // My identity is not inherited—it is forged by what I create.
-        </p>
-    </div>
-</section>
 
-        <section class="project-section">
-            <h2 class="project-title">// EzPustak</h2>
-            <p class="project-desc">A centralized hub for academic resources. Built with modern web standards to ensure speed, accessibility, and clean design.</p>
-            <a href="https://ezpustak.vercel.app/" target="_blank" style="color: var(--accent-green); text-decoration: none; font-family: 'JetBrains Mono'; font-size: 0.9rem;">View Project →</a>
-        </section>
+       
+      </div>
 
-        <a href="mailto:ghadai.saiswaroop@proton.me" class="btn">SAY HELLO</a>
-    </div>
+      <!-- posts -->
+
+      <div id="posts" class="section">
+<!--
+        <div class="card">
+
+          <small>MAY 2026</small>
+
+          <h2>Started documenting my work online</h2>
+
+          <p>
+            Wanted a clean internet space where I can
+            continuously share ideas, updates and projects.
+          </p>
+
+        </div>
+-->
+      </div>
+
+    </section>
+
+    <footer>
+      © 2026 kounsaiswaroop 
+    </footer>
+
+  </div>
+
+  <!-- javascript -->
+
+  <script>
+
+    function showSection(sectionId, button){
+
+      let sections =
+        document.querySelectorAll(".section");
+
+      sections.forEach(section => {
+        section.classList.remove("active");
+      });
+
+      document
+        .getElementById(sectionId)
+        .classList.add("active");
+
+      let buttons =
+        document.querySelectorAll(".tab-btn");
+
+      buttons.forEach(btn => {
+        btn.classList.remove("active");
+      });
+
+      button.classList.add("active");
+    }
+
+  </script>
 
 </body>
 </html>
